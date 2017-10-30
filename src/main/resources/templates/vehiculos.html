@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:with="lang=${#locale.language}" th:lang="${lang}">
+<head>
+<title th:text="#{v.titulo}"></title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link href="#" th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+	<header th:replace="layout :: site-header"></header>
+	<div class="container">
+		<h2 th:text="#{v.titulo}"></h2>
+		
+		<a th:href="@{/vehiculo/vehiculoForm}" th:title="#{g.nuevo}"> 
+		<img width="20" height="20" src="../static/imgs/crear.png"
+			th:src="@{/imgs/crear.png}" />
+		</a>
+		
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th th:text="#{v.tabla.placa}"></th>
+					<th th:text="#{v.tabla.tipo}"></th>
+					<th th:text="#{v.tabla.cilindraje}"></th>
+					<th th:text="#{v.tabla.estado}"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="v : ${vehiculos}">
+					<td><span th:text="${v.placa}"></span></td>
+					<td><span th:text="${v.tipo.nombre}"></span></td>
+					<td><span th:text="${v.cilindraje}"></span></td>
+					<td><span th:text="${v.estado}"></span></td>
+					<td><a
+						th:href="@{/vehiculo/vehiculoForm?id=__${v.placa}__}"
+						th:title="#{g.actualizar}"> <img width="20" height="20"
+							src="../static/imgs/actualizar.png"
+							th:src="@{/imgs/actualizar.png}" /></a></td>
+					<td><a
+						th:href="@{/vehiculo/eliminar?id=__${v.placa}__}"
+						th:title="#{g.eliminar}"> <img width="20" height="20"
+							src="../static/imgs/eliminar.png"
+							th:src="@{/imgs/eliminar.png}" /></a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<footer th:replace="layout :: site-footer"></footer>
+</body>
+</html>

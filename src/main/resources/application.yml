@@ -1,0 +1,55 @@
+# Server Props
+server:
+    port: 8083
+management:
+    port: 8084
+    address: 127.0.0.1
+# PostgreSQL DB - "parqueadero"
+db:
+    url: jdbc:postgresql://localhost:5432/parqueadero
+    username: postgres
+    password: postgres
+    driver: org.postgresql.Driver
+# Hibernate
+hibernate:
+    dialect: org.hibernate.dialect.PostgreSQLDialect
+    show_sql: true
+    hbm2ddl.auto: update
+# c3p0  pooling
+    c3p0:
+        identity: c3p0_1
+        min_size: 15
+        max_size: 110
+        idle_test_period: 500
+        helper_threads: 5
+        acquire_increment: 1
+entitymanager:
+    packagesToScan: co.com.ceiba.parqueadero.persistencia.entidad
+# Spring datasource y server embebido
+spring:
+        datasource:
+            tomcat:
+                max-wait: 10000
+                max-active: 110
+                max-idle: 100
+                min-idle: 15
+        jpa:
+            hibernate:
+                naming:
+                    implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+                    physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        messages:
+            basename: i18n/mensajes
+# Banner
+banner:
+    location: classpath:/banner/banner.txt 
+# Logger
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG
+                type:
+                    descriptor:
+                        sql:
+                            BasicBinder: TRACE 

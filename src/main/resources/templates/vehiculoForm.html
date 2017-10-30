@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:with="lang=${#locale.language}" th:lang="${lang}">
+<head>
+<title th:text="#{v.titulo.modal}"></title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link href="#" th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+	<header th:replace="layout :: site-header"></header>
+	<div class="container">
+		<h1 th:text="#{v.titulo.modal}"></h1>
+		<form action="#" th:action="@{/vehiculo/guardar}"
+			th:object="${vehiculo}" method="post" class="form-horizontal">
+			<div class="form-group">
+				<label class="control-label col-sm-1" for="placa" th:text="#{v.input.placa}"></label> 
+				<input
+					id="placa" type="text" th:field="*{placa}" th:value="${placa}"
+					th:readonly="${placa} != null" />
+			</div> 
+			<div class="form-group">
+				<label class="control-label col-sm-1" for="cilin"
+					th:text="#{v.input.cilindraje}"></label> 
+				<input id="cilin"
+					type="text" th:field="*{cilindraje}" th:value="${cilindraje}" /> 
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-1" for="selectTipo" th:text="#{v.input.tipo}"></label>
+				<div th:if="${tipos != null and !tipos.isEmpty()}">
+					<select id="selectTipo" th:field="*{tipo}">
+						<option th:each="item : ${tipos}" th:value="${item.codigoTipo}"
+							th:text="${item.nombre}" />
+					</select>
+				</div>
+				<div th:if="${tipos == null or tipos.isEmpty()}">
+					<div th:text="#{v.list.tipo.vacia}"></div>
+				</div> 
+			</div>
+			<input type="submit" value="#" th:value="#{g.guardar}" /> 
+			<input type="button" th:value="#{g.cerrar}"  th:href="@{/vehiculo/cancelar}"/>
+		</form>
+	</div>
+	<footer th:replace="layout :: site-footer"></footer>
+</body>
+</html>

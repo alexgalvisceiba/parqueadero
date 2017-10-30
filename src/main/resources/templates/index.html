@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:with="lang=${#locale.language}" th:lang="${lang}">
+
+<head th:replace=" layout ::site-head">
+<meta charset="UTF-8" />
+<title th:text="#{gestion.parqueadero}"></title>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link href="#" th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+
+<body>
+	<header th:replace="layout :: site-header"></header>
+	<h1 th:text="#{gestion.parqueadero}"></h1>
+	<footer th:replace="layout :: site-footer"></footer>
+</body>
+
+</html>

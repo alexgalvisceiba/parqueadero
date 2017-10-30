@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:with="lang=${#locale.language}" th:lang="${lang}">
+<head th:fragment="site-head">
+<meta charset="UTF-8" />
+<link href="#" th:href="@{/css/style.css}" rel="stylesheet" />
+<link href="#" th:href="@{/img/favicon.ico}" rel="icon" />
+<meta th:include="this :: head" th:remove="tag" />
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+	<header th:fragment="site-header">
+		<a href="index.html" th:href="@{/}"><img width="40" height="40"
+			src="../static/imgs/site-logo.png" th:src="@{/imgs/site-logo.png}" /></a>
+		<a href="index.html" th:href="@{/}" th:text="#{menu.home}"></a> <a
+			href="posts/index.html" th:href="@{/parqueadero/listar}" th:text="#{menu.parqueadero}"></a>
+		<a href="posts/create.html" th:href="@{/registro/listar}" th:text="#{menu.registro}"></a>
+		<a href="users/index.html" th:href="@{/tipoVehiculo/listar}" th:text="#{menu.tipo}"></a>
+		<a href="users/index.html" th:href="@{/vehiculo/listar}" th:text="#{menu.vehiculo}"></a>
+	</header>
+
+	<footer th:fragment="site-footer"> &copy; Spring Parqueadero,
+		2017 </footer>
+</body>
+</html>
