@@ -69,7 +69,7 @@ public class VehiculoServiceTest {
 	@Test
 	public void consultarErrorTest() {
 		// act
-		RespuestaRest<VehiculoEntidad> rrp = vs.consultar("nada");
+		RespuestaRest<VehiculoEntidad> rrp = vs.consultar(null);
 		// assert
 		Assert.assertTrue(rrp != null && rrp.getCodigo() == RespuestaRest.ERROR);
 	}
