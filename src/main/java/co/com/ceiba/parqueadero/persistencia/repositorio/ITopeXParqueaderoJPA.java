@@ -40,6 +40,6 @@ public interface ITopeXParqueaderoJPA extends JpaRepository<TopeXParqueaderoEnti
 	 * @return
 	 */
 	@Query(TopeXParqueaderoEntidad.Q_TOPEXPARQUEADERO_POR_PARQUEADEROYTIPO)
-	public TopeXParqueaderoEntidad obtenerEntidadXTipoYParqueadero(Boolean estado, ParqueaderoEntidad p,
+	TopeXParqueaderoEntidad obtenerEntidadXTipoYParqueadero(Boolean estado, ParqueaderoEntidad p,
 			TipoVehiculoEntidad tv);
 }
