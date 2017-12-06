@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import co.com.ceiba.parqueadero.constantes.ConstantesParqueadero;
 
-public class Validacion {
+public final class Validacion {
 
 	private Validacion() {
 
