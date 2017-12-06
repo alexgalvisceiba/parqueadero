@@ -29,7 +29,7 @@ public interface IRegistroJPA extends JpaRepository<RegistroEntidad, Long> {
 	 * @return
 	 */
 	@Query(RegistroEntidad.Q_REGISTRO_POR_VEHICULO)
-	public List<RegistroEntidad> obtenerXVehiculo(VehiculoEntidad v);
+	List<RegistroEntidad> obtenerXVehiculo(VehiculoEntidad v);
 
 	/**
 	 * Obtiene una lista de registros dependiendo del vehiculo
@@ -38,5 +38,5 @@ public interface IRegistroJPA extends JpaRepository<RegistroEntidad, Long> {
 	 * @return
 	 */
 	@Query(RegistroEntidad.Q_REGISTRO_EN_PARQUEADERO)
-	public List<RegistroEntidad> obtenerParqueados(TipoVehiculoEntidad tv);
+	List<RegistroEntidad> obtenerParqueados(TipoVehiculoEntidad tv);
 }

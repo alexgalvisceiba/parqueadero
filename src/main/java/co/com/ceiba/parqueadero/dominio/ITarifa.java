@@ -8,7 +8,7 @@ import co.com.ceiba.parqueadero.persistencia.entidad.VehiculoEntidad;
 
 public interface ITarifa {
 
-	public Tarifa obtenerTarifa(ParqueaderoEntidad pe, VehiculoEntidad ve);
-	
-	public BigDecimal obtenerCobro(Date fechaInicial, Date fechaFinal, Tarifa t, VehiculoEntidad ve);
+	Tarifa obtenerTarifa(ParqueaderoEntidad pe, VehiculoEntidad ve);
+
+	BigDecimal obtenerCobro(Date fechaInicial, Date fechaFinal, Tarifa t, VehiculoEntidad ve);
 }

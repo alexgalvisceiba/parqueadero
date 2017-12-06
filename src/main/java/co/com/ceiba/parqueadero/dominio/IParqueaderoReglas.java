@@ -5,11 +5,11 @@ import co.com.ceiba.parqueadero.persistencia.entidad.VehiculoEntidad;
 
 public interface IParqueaderoReglas extends ITarifa {
 
-	public Boolean placaEmpiezaConA(String placa);
+	Boolean placaEmpiezaConA(String placa);
 
-	public Boolean validarIngresoXPlaca(String placa);
+	Boolean validarIngresoXPlaca(String placa);
 
-	public int obtenerTopeParqueadero(ParqueaderoEntidad pe, VehiculoEntidad ve);
+	int obtenerTopeParqueadero(ParqueaderoEntidad pe, VehiculoEntidad ve);
 
-	public Boolean topeAlcanzado(ParqueaderoEntidad pe, VehiculoEntidad ve, int tope);
+	Boolean topeAlcanzado(ParqueaderoEntidad pe, VehiculoEntidad ve, int tope);
 }

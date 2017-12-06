@@ -25,7 +25,7 @@ public interface IParqueaderoJPA extends JpaRepository<ParqueaderoEntidad, Long>
 	 * @param estado
 	 * @return
 	 */
-	public List<ParqueaderoEntidad> findByEstado(Boolean estado);
+	List<ParqueaderoEntidad> findByEstado(Boolean estado);
 
 	/**
 	 * Obtiene un parqueadero dependiendo del nombre.
@@ -33,5 +33,5 @@ public interface IParqueaderoJPA extends JpaRepository<ParqueaderoEntidad, Long>
 	 * @param nombre
 	 * @return
 	 */
-	public ParqueaderoEntidad findByNombre(String nombre);
+	ParqueaderoEntidad findByNombre(String nombre);
 }

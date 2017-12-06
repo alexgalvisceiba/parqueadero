@@ -12,48 +12,48 @@ public interface IParqueaderoServicio {
 	 * 
 	 * @param parqueadero
 	 */
-	public ParqueaderoEntidad agregar(ParqueaderoEntidad parqueadero);
-	
+	ParqueaderoEntidad agregar(ParqueaderoEntidad parqueadero);
+
 	/**
 	 * Permite agregar un parqueadero.
 	 * 
 	 * @param nombre
 	 */
-	public ParqueaderoEntidad agregar(String nombre);
+	ParqueaderoEntidad agregar(String nombre);
 
 	/**
 	 * Permite actualizar un parqueadero..
 	 * 
 	 * @param parqueadero
 	 */
-	public ParqueaderoEntidad actualizar(ParqueaderoEntidad parqueadero);
+	ParqueaderoEntidad actualizar(ParqueaderoEntidad parqueadero);
 
 	/**
 	 * 
 	 * @param codigo
 	 * @return
 	 */
-	public ParqueaderoEntidad encontrarXPk(Long codigo);
+	ParqueaderoEntidad encontrarXPk(Long codigo);
 
 	/**
 	 * 
 	 * @param nombre
 	 * @return
 	 */
-	public ParqueaderoEntidad encontrarXNombre(String nombre);
+	ParqueaderoEntidad encontrarXNombre(String nombre);
 
 	/**
 	 * 
 	 * @param codigo
 	 */
-	public void eliminar(Long codigo);
+	void eliminar(Long codigo);
 
 	/**
 	 * Permite obtener una lista de todos los parqueaderos disponibles en BD.
 	 * 
 	 * @return
 	 */
-	public List<ParqueaderoEntidad> listar();
+	List<ParqueaderoEntidad> listar();
 
 	/**
 	 * Permite consultar un parqueadero.
@@ -61,6 +61,6 @@ public interface IParqueaderoServicio {
 	 * @param id
 	 * @return
 	 */
-	public RespuestaRest<ParqueaderoEntidad> consultar(String id);
+	RespuestaRest<ParqueaderoEntidad> consultar(String id);
 
 }

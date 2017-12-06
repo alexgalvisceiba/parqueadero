@@ -29,7 +29,7 @@ public interface ITopeXParqueaderoJPA extends JpaRepository<TopeXParqueaderoEnti
 	 * @return
 	 */
 	@Query(TopeXParqueaderoEntidad.Q_TOPEXPARQUEADERO_POR_ESTADO)
-	public List<TopeXParqueaderoEntidad> obtenerEntidadXEstado(Boolean estado);
+	List<TopeXParqueaderoEntidad> obtenerEntidadXEstado(Boolean estado);
 
 	/**
 	 * Obtiene un topexparqueadero dependiendo de los datos suministrados.

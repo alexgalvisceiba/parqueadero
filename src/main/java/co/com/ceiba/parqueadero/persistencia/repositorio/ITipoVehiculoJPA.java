@@ -28,7 +28,7 @@ public interface ITipoVehiculoJPA extends JpaRepository<TipoVehiculoEntidad, Lon
 	 * @return
 	 */
 	@Query(TipoVehiculoEntidad.Q_TIPOVEHICULO_POR_ESTADO)
-	public List<TipoVehiculoEntidad> obtenerEntidadXEstado(Boolean estado);
+	List<TipoVehiculoEntidad> obtenerEntidadXEstado(Boolean estado);
 
 	/**
 	 * Obtiene un tipo vehiculo dependiendo del tipo.
@@ -37,5 +37,5 @@ public interface ITipoVehiculoJPA extends JpaRepository<TipoVehiculoEntidad, Lon
 	 * @return
 	 */
 	@Query(TipoVehiculoEntidad.Q_TIPOVEHICULO_POR_NOMBRE)
-	public TipoVehiculoEntidad obtenerEntidadXNombre(TipoVehiculoEnum tipo);
+	TipoVehiculoEntidad obtenerEntidadXNombre(TipoVehiculoEnum tipo);
 }

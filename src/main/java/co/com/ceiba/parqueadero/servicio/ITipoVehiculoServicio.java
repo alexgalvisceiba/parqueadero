@@ -12,41 +12,41 @@ public interface ITipoVehiculoServicio {
 	 * 
 	 * @param tipo
 	 */
-	public TipoVehiculoEntidad agregar(TipoVehiculoEntidad tipo);
+	TipoVehiculoEntidad agregar(TipoVehiculoEntidad tipo);
 
 	/**
 	 * Permite actualizar un tipo de vehiculo.
 	 * 
 	 * @param tipo
 	 */
-	public TipoVehiculoEntidad actualizar(TipoVehiculoEntidad tipo);
+	TipoVehiculoEntidad actualizar(TipoVehiculoEntidad tipo);
 
 	/**
 	 * 
 	 * @param codigo
 	 * @return
 	 */
-	public TipoVehiculoEntidad encontrarXPk(Long codigo);
-	
+	TipoVehiculoEntidad encontrarXPk(Long codigo);
+
 	/**
 	 * 
 	 * @param tipo
 	 * @return
 	 */
-	public TipoVehiculoEntidad encontrarXTipo(String tipo);
+	TipoVehiculoEntidad encontrarXTipo(String tipo);
 
 	/**
 	 * 
 	 * @param codigo
 	 */
-	public void eliminar(Long codigo);
+	void eliminar(Long codigo);
 
 	/**
 	 * Permite obtener una lista de todos los tipo de vehiculo disponibles en BD.
 	 * 
 	 * @return
 	 */
-	public List<TipoVehiculoEntidad> listar();
+	List<TipoVehiculoEntidad> listar();
 
 	/**
 	 * Permite consultar un parqueadero.
@@ -54,5 +54,5 @@ public interface ITipoVehiculoServicio {
 	 * @param id
 	 * @return
 	 */
-	public RespuestaRest<TipoVehiculoEntidad> consultar(String id);
+	RespuestaRest<TipoVehiculoEntidad> consultar(String id);
 }

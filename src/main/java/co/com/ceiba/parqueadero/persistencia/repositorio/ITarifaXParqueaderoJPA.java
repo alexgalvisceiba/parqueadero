@@ -13,7 +13,8 @@ import co.com.ceiba.parqueadero.persistencia.entidad.TarifaXParqueaderoEntidad;
 import co.com.ceiba.parqueadero.persistencia.entidad.TipoVehiculoEntidad;
 
 /**
- * Define la interfaz para interaccion con la persistencia de tarifaxparqueadero.
+ * Define la interfaz para interaccion con la persistencia de
+ * tarifaxparqueadero.
  * 
  * @author Ceiba Software <BR>
  *
@@ -29,7 +30,7 @@ public interface ITarifaXParqueaderoJPA extends JpaRepository<TarifaXParqueadero
 	 * @return
 	 */
 	@Query(TarifaXParqueaderoEntidad.Q_TARIFAXPARQUEADERO_POR_ESTADO)
-	public List<TarifaXParqueaderoEntidad> obtenerEntidadXEstado(Boolean estado);
+	List<TarifaXParqueaderoEntidad> obtenerEntidadXEstado(Boolean estado);
 
 	/**
 	 * Obtiene un tarifaxparqueadero dependiendo de los datos suministrados.
@@ -40,6 +41,6 @@ public interface ITarifaXParqueaderoJPA extends JpaRepository<TarifaXParqueadero
 	 * @return
 	 */
 	@Query(TarifaXParqueaderoEntidad.Q_TARIFAXPARQUEADERO_POR_PARQUEADEROYTIPO)
-	public TarifaXParqueaderoEntidad obtenerEntidadXTipoYParqueadero(Boolean estado, ParqueaderoEntidad p,
+	TarifaXParqueaderoEntidad obtenerEntidadXTipoYParqueadero(Boolean estado, ParqueaderoEntidad p,
 			TipoVehiculoEntidad tv);
 }

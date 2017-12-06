@@ -12,7 +12,7 @@ public interface IVehiculoServicio {
 	 * 
 	 * @param vehiculo
 	 */
-	public VehiculoEntidad agregar(VehiculoEntidad vehiculo);
+	VehiculoEntidad agregar(VehiculoEntidad vehiculo);
 
 	/**
 	 * Permite agregar un vehiculo.
@@ -22,34 +22,34 @@ public interface IVehiculoServicio {
 	 * @param tipo
 	 * @return
 	 */
-	public VehiculoEntidad agregar(String placa, String cilindraje, String tipo);
+	VehiculoEntidad agregar(String placa, String cilindraje, String tipo);
 
 	/**
 	 * Permite actualizar un vehiculo.
 	 * 
 	 * @param vehiculo
 	 */
-	public VehiculoEntidad actualizar(VehiculoEntidad vehiculo);
+	VehiculoEntidad actualizar(VehiculoEntidad vehiculo);
 
 	/**
 	 * 
 	 * @param codigo
 	 * @return
 	 */
-	public VehiculoEntidad encontrarXPk(String codigo);
+	VehiculoEntidad encontrarXPk(String codigo);
 
 	/**
 	 * 
 	 * @param codigo
 	 */
-	public void eliminar(String codigo);
+	void eliminar(String codigo);
 
 	/**
 	 * Permite listar los vehiculos en BD.
 	 * 
 	 * @return
 	 */
-	public List<VehiculoEntidad> listar();
+	List<VehiculoEntidad> listar();
 
 	/**
 	 * Permite consultar un tipo de vehiculo.
@@ -57,5 +57,5 @@ public interface IVehiculoServicio {
 	 * @param id
 	 * @return
 	 */
-	public RespuestaRest<VehiculoEntidad> consultar(String placa);
+	RespuestaRest<VehiculoEntidad> consultar(String placa);
 }

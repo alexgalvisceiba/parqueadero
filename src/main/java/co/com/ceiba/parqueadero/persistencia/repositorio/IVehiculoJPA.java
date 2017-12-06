@@ -27,5 +27,5 @@ public interface IVehiculoJPA extends JpaRepository<VehiculoEntidad, String> {
 	 * @return
 	 */
 	@Query(VehiculoEntidad.Q_VEHICULO_POR_ESTADO)
-	public List<VehiculoEntidad> obtenerEntidadXEstado(Boolean estado);
+	List<VehiculoEntidad> obtenerEntidadXEstado(Boolean estado);
 }

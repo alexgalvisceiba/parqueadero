@@ -7,7 +7,7 @@ import java.util.Base64;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-public class Cifrado {
+public final class Cifrado {
 
 	private static final String SHA256 = "SHA-256";
 	private static final Logger LOGGER = LogManager.getLogger(Cifrado.class);

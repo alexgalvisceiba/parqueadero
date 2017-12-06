@@ -13,7 +13,7 @@ public interface IVigilanteServicio {
 	 * @param tipo
 	 * @return
 	 */
-	public Boolean registrarIngreso(String nombreParqueadero, String placa, String cilindraje, String tipo);
+	Boolean registrarIngreso(String nombreParqueadero, String placa, String cilindraje, String tipo);
 
 	/**
 	 * Expone el servicio rest simple para mapeo customizado.
@@ -24,6 +24,6 @@ public interface IVigilanteServicio {
 	 * @param tipo
 	 * @return
 	 */
-	public RespuestaRest<Boolean> registrarIngresoConRespuesta(String nombreParqueadero, String placa,
-			String cilindraje, String tipo);
+	RespuestaRest<Boolean> registrarIngresoConRespuesta(String nombreParqueadero, String placa, String cilindraje,
+			String tipo);
 }

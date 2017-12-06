@@ -1,6 +1,6 @@
 package co.com.ceiba.parqueadero.constantes;
 
-public class ConstantesServicio {
+public final class ConstantesServicio {
 
 	// Url
 	public static final String U_INDEX = "/";
